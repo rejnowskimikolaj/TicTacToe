@@ -7,12 +7,11 @@ import com.example.rent.tictactoe.models.createGame.model.CreateGameResponse;
 import com.example.rent.tictactoe.models.gameList.model.GameListResponse;
 import com.example.rent.tictactoe.models.joinGame.model.JoinGameRequest;
 import com.example.rent.tictactoe.models.makeMove.model.MakeMoveRequest;
-import com.example.rent.tictactoe.models.model.LoginResponse;
+import com.example.rent.tictactoe.models.login.model.LoginResponse;
 import com.example.rent.tictactoe.models.myGame.model.MyGameResponse;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -69,7 +68,7 @@ public interface TttApiClient {
     @DELETE("/plugin/ttt.leaveGame")
     Call<ResponseBody> leaveGame(@Header("X-BB-SESSION") String token);
 
-    @GET("/plugin/ttt.game")
+    @GET("/plugin/ttt.gameData")
     Call<GameDataResponse> getGameData(@Header("X-BB-SESSION") String token,@Query("gameId") String gameId);
 
     @POST("/plugin/ttt.makeMove")

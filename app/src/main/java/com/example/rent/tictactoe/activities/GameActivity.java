@@ -3,6 +3,7 @@ package com.example.rent.tictactoe.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import com.example.rent.tictactoe.asyncTasks.MakeMoveAsyncTask;
 import com.example.rent.tictactoe.models.GameData.model.GameData;
 import com.example.rent.tictactoe.models.GameData.model.Move;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,6 +51,8 @@ public class GameActivity extends AppCompatActivity implements LeaveGameAsyncTas
         });
 
         initMoveButtons();
+        movesOwner = new ArrayList<>();
+        movesPlayer = new ArrayList<>();
 
         textView = (TextView) findViewById(R.id.activity_game_textView);
 
@@ -114,7 +118,7 @@ public class GameActivity extends AppCompatActivity implements LeaveGameAsyncTas
                 onMoveButtonClicked(new Move(2,1));
             }
         });
-        Button button22 = (Button) findViewById(R.id.button00);
+        Button button22 = (Button) findViewById(R.id.button22);
         button22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -176,16 +180,25 @@ public class GameActivity extends AppCompatActivity implements LeaveGameAsyncTas
     public void onDataGot(GameData gameData) {
         if(gameData!=null){
 
+
+            movesPlayer = gameData.getMovesPlayer();
+            movesOwner = gameData.getMovesOwner();
             updateButtons();
+
         }
     }
+
+
 
     private void updateButtons(){
 
         if(!(movesOwner==null||movesOwner.isEmpty())){
             for(Move move: movesOwner){
+                Log.e("UPDATE BUTTONS",move.getX()+""+move.getY() );
+
                 Button button =buttonMap.get(move);
                 button.setText("X");
+                button.setTextColor(getResources().getColor(R.color.ColorX));
                 button.setEnabled(false);
             }
         }
@@ -193,6 +206,7 @@ public class GameActivity extends AppCompatActivity implements LeaveGameAsyncTas
             for(Move move: movesPlayer){
                 Button button =buttonMap.get(move);
                 button.setText("O");
+                button.setTextColor(getResources().getColor(R.color.colorCircle));
                 button.setEnabled(false);
             }
         }
@@ -207,7 +221,7 @@ public class GameActivity extends AppCompatActivity implements LeaveGameAsyncTas
         }
 
         else{
-            Toast.makeText(this,"Oops",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Not your turn.",Toast.LENGTH_SHORT).show();
 
         }
     }

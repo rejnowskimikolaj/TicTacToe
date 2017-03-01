@@ -28,4 +28,18 @@ public class Move {
     public void setY(int y) {
         this.y = y;
     }
+
+    @Override
+    public int hashCode()
+    {
+        String xy = x+""+y;
+
+        return Integer.parseInt(xy);
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        return o.hashCode()==hashCode();
+    }
 }

@@ -4,11 +4,9 @@ import android.os.AsyncTask;
 
 import com.example.rent.tictactoe.RetrofitUtils.TttApiClient;
 import com.example.rent.tictactoe.RetrofitUtils.TttApiClientFactory;
-import com.example.rent.tictactoe.User.User;
 import com.example.rent.tictactoe.User.UserService;
 import com.example.rent.tictactoe.models.createGame.model.CreateGameRequest;
 import com.example.rent.tictactoe.models.createGame.model.CreateGameResponse;
-import com.example.rent.tictactoe.models.model.LoginResponse;
 
 import java.io.IOException;
 

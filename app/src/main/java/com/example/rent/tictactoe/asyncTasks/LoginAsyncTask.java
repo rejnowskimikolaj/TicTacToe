@@ -6,8 +6,8 @@ import com.example.rent.tictactoe.RetrofitUtils.TttApiClient;
 import com.example.rent.tictactoe.RetrofitUtils.TttApiClientFactory;
 import com.example.rent.tictactoe.User.User;
 import com.example.rent.tictactoe.User.UserService;
-import com.example.rent.tictactoe.models.model.LoginResponse;
-import com.example.rent.tictactoe.models.model.LoginResponseData;
+import com.example.rent.tictactoe.models.login.model.LoginResponse;
+import com.example.rent.tictactoe.models.login.model.LoginResponseData;
 
 import java.io.IOException;
 

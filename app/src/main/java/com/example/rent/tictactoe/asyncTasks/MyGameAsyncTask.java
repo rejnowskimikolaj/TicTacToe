@@ -5,13 +5,10 @@ import android.os.AsyncTask;
 import com.example.rent.tictactoe.RetrofitUtils.TttApiClient;
 import com.example.rent.tictactoe.RetrofitUtils.TttApiClientFactory;
 import com.example.rent.tictactoe.User.UserService;
-import com.example.rent.tictactoe.models.model.LoginResponse;
-import com.example.rent.tictactoe.models.model.LoginResponseData;
 import com.example.rent.tictactoe.models.myGame.model.MyGameResponse;
 import com.example.rent.tictactoe.models.myGame.model.MyGameResponseData;
 
 import java.io.IOException;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Response;

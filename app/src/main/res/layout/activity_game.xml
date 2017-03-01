@@ -32,54 +32,45 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="0,0"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button00" />
 
         <Button
-            android:text="0,1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button01" />
 
         <Button
-            android:text="0,2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button02" />
 
         <Button
-            android:text="1,0"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button10" />
 
         <Button
-            android:text="1,1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button11" />
 
         <Button
-            android:text="1,2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button12" />
         <Button
-            android:text="2,0"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button20" />
 
         <Button
-            android:text="2,1"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button21" />
 
         <Button
-            android:text="2,2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button22" />
